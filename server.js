@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 app.use(session({
-  secret: 'my-secret',
+  secret: 'trkntrkn',
   resave: true,
   saveUninitialized: true,
   cookie: {
@@ -41,8 +41,8 @@ app.post('/reviews', function (req, res) {
 
 app.get('/session/new', function (req, res) {
   req.session.isValid = true;
-  req.session.username = 'Alice';
-  req.session.email = 'alice@acme.com';
+  req.session.username = 'trkn';
+  req.session.email = 'trkn@gmail.com';
   res.redirect('/');
 });
 
